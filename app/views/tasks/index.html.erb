@@ -1,8 +1,13 @@
-<h1>Tasks List</h1>
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="app/assets/images/task-icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    My Task Manager
+  </a>
+</nav>
 
 <ul>
   <% @tasks.each do |task| %>
-    <li><%=  link_to task.name, task_path(task) %></li>
+    <li><input type="checkbox"><%=  link_to task.name, task_path(task) %></li>
   <% end %>
 </ul>
 
